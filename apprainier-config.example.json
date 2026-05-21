@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "sdk": "apprainier",
+  "apiKey": "replace_with_api_key",
+  "apiKeyId": "replace_with_api_key_id",
+  "apiKeyName": "stage_api_key",
+  "environment": "stage",
+  "allowedPlatforms": ["web"],
+  "scopes": ["client_runtime", "analytics"],
+  "appwrite": {
+    "endpoint": "https://sfo.cloud.appwrite.io/v1",
+    "projectId": "replace_with_appwrite_project_id",
+    "databaseId": "replace_with_database_id",
+    "gatewayFunctionId": "replace_with_gateway_function_id",
+    "imagesBucketId": "replace_with_images_bucket_id",
+    "messageAttachmentsBucketId": "message_attachments"
+  },
+  "workspace": {
+    "organizationId": "replace_with_organization_id",
+    "projectId": "replace_with_project_id",
+    "appId": "replace_with_app_id",
+    "teamId": "replace_with_team_id",
+    "clientAppName": "Web Test App"
+  },
+  "runtime": {
+    "version": 1,
+    "cache": {
+      "featureFlagsTtlMs": 300000,
+      "surveysTtlMs": 900000,
+      "announcementsTtlMs": 900000,
+      "liveCardsTtlMs": 900000,
+      "messageCenterSettingsTtlMs": 300000
+    },
+    "events": {
+      "enabled": true,
+      "flushIntervalMs": 120000,
+      "batchSize": 50,
+      "maxQueueSize": 500
+    },
+    "messageCenter": {
+      "passivePollingEnabled": false,
+      "listPollingIntervalMs": 60000,
+      "chatPollingIntervalMs": 10000,
+      "foregroundRefreshTtlMs": 60000
+    }
+  }
+}

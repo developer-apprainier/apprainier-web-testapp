@@ -1,0 +1,24 @@
+# macOS / editor
+.DS_Store
+.idea/
+*.iml
+
+# Package manager noise
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+.vite/
+.parcel-cache/
+coverage/
+
+# Real AppRainier API key config is local-only.
+apprainier-config.json
+
+# Keep this committed as the safe template.
+!apprainier-config.example.json
