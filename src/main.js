@@ -1,4 +1,4 @@
-import { AppRainier, AppRainierEvents } from '../../apprainier-web-plugin/src/index.js';
+import { AppRainier, AppRainierEvents } from '../../apprainier-web-plugin/src/index.js?v=emoji-mood-theme-sync';
 
 const APPRAINIER_CONFIG_URL = new URL('../apprainier-config.json', import.meta.url).href;
 
@@ -30,13 +30,13 @@ const surveyTriggers = [
 ];
 
 const announcementTriggers = [
-  ['Maintenance Alert Announcement', 'maintenance_alert_announcement'],
-  ['Announcement Carousel Announcements', 'announcement_carousel_announcements'],
-  ['Announcement Feature Adoption Prompt', 'announcement_feature_adoption_prompt'],
-  ['Announcement Mandatory Update Screen', 'announcement_mandatory_update_screen'],
-  ['Announcement Service Outage Banner', 'announcement_service_outage_banner'],
-  ['Announcement Maintenance Alert', 'announcement_maintenance_alert'],
-  ['Announcement Version Update Banner', 'announcement_version_update_banner'],
+  ['Maintenance Alert Announcement', 'feature_announcement'],
+  ['Announcement Carousel Announcements', 'carousel_announcement'],
+  ['Announcement Feature Adoption Prompt', 'feature_adoption_announcement'],
+  ['Announcement Mandatory Update Screen', 'mandatory_update_announcement'],
+  ['Announcement Service Outage Banner', 'service_outage_announcement'],
+  ['Announcement Maintenance Alert', 'maintenance_alert_announcement'],
+  ['Announcement Version Update Banner', 'version_update_announcement'],
 ];
 
 const liveCards = [
@@ -130,6 +130,7 @@ function renderScreen(id) {
   `;
   document.querySelector('.screen-header .actions').append(button('Back', 'button secondary', renderHome));
   if (id === 'surveys') renderTriggerList('screen-panel', surveyTriggers, async (triggerId) => {
+    await AppRainier.refreshSurveys(true);
     const shown = await AppRainier.showSurvey(triggerId);
     if (!shown) toast('Survey not shown', `No eligible survey for ${triggerId}`);
   });
