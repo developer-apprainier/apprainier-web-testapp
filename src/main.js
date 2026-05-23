@@ -1,4 +1,4 @@
-import { AppRainier, AppRainierEvents } from '../../apprainier-web-plugin/src/index.js?v=emoji-mood-theme-sync';
+import { AppRainier, AppRainierEvents } from '../../apprainier-web-plugin/src/index.js?v=1.0.0-secure';
 
 const APPRAINIER_CONFIG_URL = new URL('../apprainier-config.json', import.meta.url).href;
 
