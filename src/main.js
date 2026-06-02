@@ -40,6 +40,8 @@ const announcementTriggers = [
 ];
 
 const liveCards = [
+  ['ShopIT Home Hero Carousel', 'shopit_home_hero_carousel'],
+  ['ShopIT Deal Tile', 'shopit_deal_tile'],
   ['Promotions Showcase Carousel', 'promotions_showcase_carousel'],
   ['Discount Product Live Card', 'live_card_discount_product'],
 ];
