@@ -1,4 +1,4 @@
-import { AppRainier, AppRainierEvents } from '../../apprainier-web-plugin/src/index.js?v=1.0.0-secure';
+import { AppRainier, AppRainierEvents } from '../../apprainier-web-plugin/src/index.js?v=2.0.0';
 
 const APPRAINIER_CONFIG_URL = new URL('../apprainier-config.json', import.meta.url).href;
 
